@@ -106,3 +106,16 @@ body {
 .message.hidden {
   max-height: 0;
 }
+
+.score {
+  position: absolute;
+  top: 20px;
+  margin: 0 auto;
+  width: 600px;
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+    1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}

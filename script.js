@@ -15,9 +15,12 @@ btnStart.addEventListener('click', play);
 
 const message = document.querySelector('.message');
 
+const score = document.querySelector('.score');
+
 function nextLevel() {
     enableClick = false;
     setTimeout(() => {
+        score.innerHTML =`SCORE: ${sequence.length}`;
         const random = Math.floor(Math.random() * 4);
         sequence.push(colors[random]);
         pos = 0;
@@ -70,6 +73,7 @@ function gameover() {
     enableClick = false;
     sequence = [];
 
+    score.innerHTML = 'SCORE: 0';
     message.innerHTML = 'Você perdeu!';
     message.classList.remove('hidden');
     btnStart.classList.remove('hidden');
