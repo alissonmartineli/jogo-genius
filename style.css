@@ -23,6 +23,10 @@ body {
   height: 600px;
 }
 
+.button {
+  cursor: pointer;
+}
+
 .red {
   grid-area: red;
   background-color: red;
