@@ -13,7 +13,7 @@ buttons.forEach(button => {
 const btnStart = document.querySelector('.start');
 btnStart.addEventListener('click', play);
 
-const overlay = document.querySelector('.overlay');
+const message = document.querySelector('.message');
 
 function nextLevel() {
     enableClick = false;
@@ -67,16 +67,16 @@ function click(color) {
 }
 
 function gameover() {
-    alert('você perdeu!');
     enableClick = false;
     sequence = [];
 
-    btnStart.style.display = 'block';
-    overlay.style.display = 'grid';
+    message.innerHTML = 'Você perdeu!';
+    message.classList.remove('hidden');
+    btnStart.classList.remove('hidden');
 }
 
 function play() {
-    btnStart.style.display = 'none';
-    overlay.style.display = 'none';
+    message.classList.add('hidden');
+    btnStart.classList.add('hidden');
     nextLevel();
 }
