@@ -78,5 +78,24 @@ function gameover() {
 function play() {
     message.classList.add('hidden');
     btnStart.classList.add('hidden');
-    nextLevel();
+
+    let i = 3;
+    const interval = setInterval(() => {
+        if (i > 0) {
+            message.innerHTML = i;
+            message.classList.remove('hidden');
+            setTimeout(() => {
+                message.classList.add('hidden');
+            }, 500);
+            i--;
+        } else {
+            message.innerHTML = 'GO!';
+            message.classList.remove('hidden');
+            setTimeout(() => {
+                message.classList.add('hidden');
+            }, 500);
+            clearInterval(interval);
+            nextLevel();
+        }
+    }, 1000)
 }

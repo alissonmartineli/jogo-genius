@@ -80,6 +80,7 @@ body {
   opacity: 1;
   transition: transform 0.3s;
   transition: opacity 0.3s;
+  margin-top: 20px;
 }
 
 .start:hover {
@@ -87,13 +88,13 @@ body {
 }
 
 .message {
-  font-size: 32px;
+  font-size: 60px;
   font-weight: bold;
   color: #fff;
   text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
     1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
   opacity: 1;
-  max-height: 300px;
+  max-height: 500px;
   transition: opacity 0.3s;
   transition: max-height 1s ease-in-out;
 }
