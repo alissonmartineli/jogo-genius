@@ -10,6 +10,11 @@ buttons.forEach(button => {
     });
 });
 
+const btnStart = document.querySelector('.start');
+btnStart.addEventListener('click', play);
+
+const overlay = document.querySelector('.overlay');
+
 function nextLevel() {
     enableClick = false;
     setTimeout(() => {
@@ -65,10 +70,13 @@ function gameover() {
     alert('você perdeu!');
     enableClick = false;
     sequence = [];
+
+    btnStart.style.display = 'block';
+    overlay.style.display = 'grid';
 }
 
 function play() {
+    btnStart.style.display = 'none';
+    overlay.style.display = 'none';
     nextLevel();
 }
-
-play();
